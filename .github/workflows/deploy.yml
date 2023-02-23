@@ -14,10 +14,10 @@
           - run: docker build -t bradmasy/react-test -f complex/client/Dockerfile.dev complex/client
           - run: docker run -e CI=true bradmasy/react-test npm test
      
-          - run: docker build -t bradmasy/multi-client-10-14 .complex/client
-          - run: docker build -t bradmasy/multi-nginx-10-14 ./nginx
-          - run: docker build -t bradmasy/multi-server-10-14 ./server
-          - run: docker build -t bradmasy/multi-worker-10-14 ./worker
+          - run: docker build -t bradmasy/multi-client-10-14 complex/client
+          - run: docker build -t bradmasy/multi-nginx-10-14 complex/nginx
+          - run: docker build -t bradmasy/multi-server-10-14 complex/server
+          - run: docker build -t bradmasy/multi-worker-10-14 complex/worker
      
           - run: docker push bradmasy/multi-client-10-14
           - run: docker push bradmasy/multi-nginx-10-14
